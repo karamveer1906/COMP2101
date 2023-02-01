@@ -11,4 +11,4 @@ echo "IP Addresses:"
 hostname -I
 #df will give us the data regarding the amount of space available in root filesystem
 echo "Root Filesystem Status"
-df
+df -h /
