@@ -5,7 +5,7 @@ dat1=$(hostname)
 #dat2 is a variable which will give the fully qualified domain name(FQDN)
 dat2=$(hostname -f)
 #dat 3 will give the whole information regarding the system and grep will trim it operating system information
-dat3=$(hostnamectl | grep Operating)
+dat3=$(hostnamectl | grep Operating | awk '{print $3,$4,$5}')
 #dat4  is a variable which will provide the IP address of the host name
 dat4=$(hostname -I)
 #dat5 is a variable which will give us the system indormation in which awk is used to give only the fourth line and then tail is used because we only want the last line
