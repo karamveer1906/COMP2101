@@ -12,6 +12,7 @@ function Get-SystemInformation {
     $computerModel = $computerSystem.Model
     $computerName = $computerSystem.Name
     $computerDescription = "$computerManufacturer $computerModel ($computerName)"
+}
 
     # Get operating system name and version number
     $operatingSystem = Get-WmiObject -Class Win32_OperatingSystem
@@ -63,3 +64,5 @@ function Get-SystemInformation {
             Name = $_.Name
             Description = $_.InterfaceDescription
             MACAddress = $_.MacAddress
+}
+}
